@@ -4,7 +4,7 @@ vm = new Vue({
     message: "pudding"
   },
   computed: {
-    reverseMessage: function() {
+    reverseMessage() {
       return this.message
         .split("")
         .reverse()
