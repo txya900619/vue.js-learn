@@ -1,0 +1,10 @@
+.red {
+  background-color: red;
+  color: rgb(253, 236, 236);
+}
+.big {
+  font-size: large;
+}
+.bigger {
+  font-size: larger;
+}

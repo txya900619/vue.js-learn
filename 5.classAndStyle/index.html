@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Class and Style</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <div id="app">
+      <p :class="{red:isRed,big:isBig}">oh wow!</p>
+      <p :class="classObject">naniiiiiii!</p>
+      <p :class="computedClassObject">olaolaolaolaola~</p>
+      <button @click="Bigger">bigger!!</button>
+      <p
+        :style="{'background-color':backgroundColor,'font-size':fontSize+'px'}"
+      >
+        yeeeeeeeeeeeeeeeeeeee!
+      </p>
+      <p :style="styleObject">wryyyyyyyyyyyyyyyyyyyyy!</p>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
