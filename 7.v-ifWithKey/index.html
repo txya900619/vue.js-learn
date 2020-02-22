@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>v-iffffff</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <template v-if="!changed">
+        <p>A sample message</p>
+        <input placeholder="lul" />
+      </template>
+      <template v-else>
+        <p>Another message</p>
+        <input placeholder="ouooouo" />
+      </template>
+      <button @click="changeFirst">change!</button>
+    </div>
+    <div id="appAddKey">
+      <template v-if="!changed">
+        <p>A sample message</p>
+        <input placeholder="lul" key="lul" />
+      </template>
+      <template v-else>
+        <p>Another message</p>
+        <input placeholder="ouooouo" key="ouooouo" />
+      </template>
+      <button @click="changeFirst">change!</button>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
