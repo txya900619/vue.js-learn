@@ -20,3 +20,14 @@ appAddKey = new Vue({
     }
   }
 });
+appShow = new Vue({
+  el: "#appShow",
+  data: {
+    show: true
+  },
+  methods: {
+    change() {
+      this.show = !this.show;
+    }
+  }
+});
