@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>v-iffffff</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p v-if="showFirst">ohhhhhhhhhhh!</p>
+      <button @click="changeFirst">change</button>
+      <p v-if="showSecond">I forgot push 5.style QQQQQQQ</p>
+      <p v-else style="padding:9px"></p>
+      <button @click="changeSecond">Switch!</button>
+      <template v-if="showThird%3===0">
+        <p>I in Chiayi can't play FFXIV QQQQQQQQQQ</p>
+        <p>So sad lul</p>
+        <button @click="nextBro">Next!</button>
+      </template>
+      <template v-else-if="showThird%3===1">
+        <p>But I can coding in Chiayi</p>
+        <p>I think it is Good~</p>
+        <button @click="nextBro">And next!</button>
+      </template>
+      <template v-else>
+        <p>lalafell is sooooo good</p>
+        <img
+        src=https://cdn.discordapp.com/attachments/529031581869015040/680328921124044840/1582273290234.jpg
+        width="20%">
+        <button @click="nextBro">Return to First</button>
+      </template>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

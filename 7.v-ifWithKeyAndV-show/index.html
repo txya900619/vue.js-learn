@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>v-iffffff</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <template v-if="!changed">
+        <p>A sample message</p>
+        <input placeholder="lul" />
+      </template>
+      <template v-else>
+        <p>Another message</p>
+        <input placeholder="ouooouo" />
+      </template>
+      <button @click="changeFirst">change!</button>
+    </div>
+    <div id="appAddKey">
+      <template v-if="!changed">
+        <p>A sample message</p>
+        <input placeholder="lul" key="lul" />
+      </template>
+      <template v-else>
+        <p>Another message</p>
+        <input placeholder="ouooouo" key="ouooouo" />
+      </template>
+      <button @click="changeFirst">change!</button>
+    </div>
+    <div id="appShow">
+      <p v-show="show">
+        The difference is that an element with v-show will always be rendered
+        and remain in the DOM; v-show only toggles the display CSS property of
+        the element.
+      </p>
+      <p v-show="!show">
+        Note that v-show doesn’t support the
+        <code>&lttemplate&gt</code> element, nor does it work with v-else.
+      </p>
+      <button @click="change">change!!</button>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
