@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>v-for</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <form @submit.prevent="addTodo">
+        <label for="newTodo">Add a todo</label>
+        <input
+          v-model="newTodoText"
+          id="newTodo"
+          placeholder="example: say hello!"
+        />
+        <button>Add</button>
+      </form>
+      <ul>
+        <todolist
+          v-for="(todo,index) in todos"
+          v-bind:key="todo.id"
+          v-bind:title="todo.title"
+          @rm="todos.splice(index,1)"
+        ></todolist>
+      </ul>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
