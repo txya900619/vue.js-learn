@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>v-for</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input type="radio" id="one" value="One" v-model="picked" />
+      <label for="one">One</label>
+      <br />
+      <input type="radio" id="two" value="Two" v-model="picked" />
+      <label for="two">Two</label>
+      <br />
+      <span>Picked:{{picked}}</span>
+      <br />
+      <input type="checkbox" v-model="toggle1" />
+      <br />
+      <span>{{toggle1}}</span>
+      <br />
+      <input
+        type="checkbox"
+        v-model="toggle2"
+        true-value="yaaaa"
+        false-value="noooooo"
+      />
+      <br />
+      <span>{{toggle2}}</span>
+      <br />
+      <input type="radio" v-model="pick1" value="a" />
+      <br />
+      <span>{{pick1}}</span>
+      <br />
+      <input type="radio" v-model="pick2" :value="a" />
+      <br />
+      <span>{{pick2}}</span>
+      <br />
+      <input v-model.lazy="msg" />
+      <br />
+      <span>{{msg}}</span>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
