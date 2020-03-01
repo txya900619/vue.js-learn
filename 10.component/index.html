@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>v-for</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <alert
+        v-for="message in messages"
+        :message="message.text"
+        :key="message.id"
+      ></alert>
+      <alertplus>123</alertplus>
+      <div :style="{ fontSize: FontSize + 'em'}">
+        <smaller
+          v-for="message in messages"
+          @smaller-font="FontSize-=1"
+          :key="message.id"
+          :message="message.text"
+        ></smaller>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
